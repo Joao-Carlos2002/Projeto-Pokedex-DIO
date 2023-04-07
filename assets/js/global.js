@@ -3,7 +3,7 @@ for (let i = 1; i < 152; i++) {
         .then(response => response.json())
         .then(data => {
             addSprites(data, i)
-        })
+        }, 500)
         .catch(err => console.error(err));
 }
 
