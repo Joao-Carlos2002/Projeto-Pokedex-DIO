@@ -1,10 +1,12 @@
-for (let i = 1; i < 152; i++) {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`)
-        .then(response => response.json())
-        .then(data => {
-            addSprites(data, i)
-        }, 500)
-        .catch(err => console.error(err));
+export async function getApi(index, indexMax) {
+    for (let i = index; i < indexMax; i++) {
+        await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`)
+            .then(response => response.json())
+            .then(data => {
+                addSprites(data, i)
+            }, 500)
+            .catch(err => console.error(err));
+    }
 }
 
 function addSprites(data, index) {

@@ -54,7 +54,6 @@ body {
 }
 
 .title {
-    /* margin-top: 7vh; */
     text-align: center;
     color: var(--title-color);
 }
